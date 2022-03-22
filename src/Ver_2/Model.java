@@ -27,4 +27,37 @@ public class Model {
         }
         return null;
     }
+
+    public Data update(String NameToUpdate,String newName,String newPosition,Integer newId){
+
+        Data data = read(NameToUpdate);
+        if(data != null){
+            data.setName(newName);
+            data.setPosition(newPosition);
+            data.setId(newId);
+        }
+        return null;
+    }
+
+
+    public Integer delete(String NameToDelete){
+        int indexToRemove = -1;
+
+        for(int i = 0; i < datalist.size(); i++){
+            if(datalist.get(i).getName().equals(NameToDelete)){
+                indexToRemove = i;
+                break;
+            }
+
+        }
+        if(indexToRemove != -1){
+
+            datalist.remove(indexToRemove);
+        }
+        return indexToRemove;
+    }
+
+
+
+
 }
