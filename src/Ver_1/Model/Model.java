@@ -1,4 +1,6 @@
-package Ver_1;
+package Ver_1.Model;
+
+import Ver_1.Data.Data;
 
 import java.util.ArrayList;
 import java.util.List;

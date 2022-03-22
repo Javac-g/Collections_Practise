@@ -1,4 +1,4 @@
-package Ver_1;
+package Ver_1.Data;
 
 public class Data {
 

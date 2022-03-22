@@ -1,4 +1,4 @@
-package Ver_2;
+package Ver_2.Control;
 
 public class Controller {
 }

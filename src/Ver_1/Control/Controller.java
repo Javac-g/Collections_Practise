@@ -1,4 +1,8 @@
-package Ver_1;
+package Ver_1.Control;
+
+import Ver_1.Data.Data;
+import Ver_1.Model.Model;
+import Ver_1.View.View;
 
 public class Controller {
 

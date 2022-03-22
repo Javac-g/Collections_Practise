@@ -1,6 +1,8 @@
-package Ver_2;
+package Ver_2.Model;
 
 //Class with Business logic and DB.
+
+import Ver_2.Data.Data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +56,7 @@ public class Model {
 
             datalist.remove(indexToRemove);
         }
+
         return indexToRemove;
     }
 

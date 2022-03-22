@@ -1,4 +1,6 @@
-package Ver_1;
+package Ver_1.View;
+
+import Ver_1.Data.Data;
 
 import java.util.Scanner;
 
