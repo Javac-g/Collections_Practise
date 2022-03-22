@@ -17,6 +17,7 @@ public class Model {
         data.setName(Name);
         data.setPosition(Position);
         data.setId(Id);
+        datalist.add(data);
 
     }
 

@@ -9,7 +9,6 @@ public class Data {
     private String position;
 
 
-
     public String getName() {
         return Name;
     }
@@ -33,6 +32,4 @@ public class Data {
     public void setPosition(String position) {
         this.position = position;
     }
-
-
 }

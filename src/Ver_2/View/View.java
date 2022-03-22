@@ -16,22 +16,27 @@ public class View {
     public Integer readCommand(){
 
         return scanner.nextInt();
+
     }
 
-    public String printMessage(String message){
-        return message;
+
+    public void printMessage(String message){
+        System.out.println(message);
     }
     public String inputName(){
-        String inputName = scanner.next();
-        return inputName;
+        System.out.println("Enter person name: ");
+        String inpName = scanner.next();
+        return inpName;
     }
     public String inputPosition(){
-        String inputPosition = scanner.next();
-        return inputPosition;
+        System.out.println("Enter persons position: ");
+        String inpPosition = scanner.next();
+        return inpPosition;
     }
     public Integer inputID(){
-        Integer inputID = scanner.nextInt();
-        return inputID;
+        System.out.println("Enter persons ID: ");
+        Integer inpID = scanner.nextInt();
+        return inpID;
     }
 
     public void printPerson(Data data){

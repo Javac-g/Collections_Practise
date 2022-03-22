@@ -18,7 +18,7 @@ public class Controller {
             if(command.equals(5)){
                 break;
             }
-            else if (command.equals(1)){
+            else if(command.equals(1)){
                 view.printMessage("Enter persons data:");
                 model.create(view.inputName(),view.inputPosition(),view.inputID());
                 view.printMessage("Data was added succsessfull! ");
@@ -28,10 +28,10 @@ public class Controller {
                 Data data = model.read(view.inputName());
 
                 if(data != null){
-                        view.printPerson(data);
+                    view.printPerson(data);
                 }
                 else {
-                        view.printMessage("Nothing to show");
+                    view.printMessage("Nothing to show");
                 }
             }
             else if(command.equals(3)){
