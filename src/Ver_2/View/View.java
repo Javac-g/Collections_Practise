@@ -1,6 +1,6 @@
 package Ver_2.View;
 import Ver_2.Data.Data;
-
+//Class with user-interaction logic
 import java.util.Scanner;
 public class View {
     private final static Scanner scanner = new Scanner(System.in);
