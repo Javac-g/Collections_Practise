@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.operations.Mod;
+package Ver_1;
 
 public class Controller {
 
@@ -43,7 +43,7 @@ public class Controller {
                 view.printIncomingString("Enter data to delete");
                 int index = model.delete(view.readStringData());
                 if(index != -1){
-                    view.printIncomingString("Data in index: " + index + "was deleted");
+                    view.printIncomingString("Data in index: " + index + " was deleted");
                 }else {
                     view.printIncomingString("Nothing to delete");
                 }
