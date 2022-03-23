@@ -19,12 +19,21 @@ public class Model {
         data.setPosition(Position);
         data.setId(Id);
         database.add(data);
-        try(FileInputStream fileInputStream = new FileInputStream(String.valueOf(data));
+        try(
             FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\Max.000\\IdeaProjects\\Collections_Practice\\src\\Ver_3\\Model\\data.txt",true)){
             String i;
             byte[] b;
 
-            i = String.valueOf(data + " \n");
+            i ="Name: " + data.getName() + "\n";
+            b = i.getBytes();
+            fileOutputStream.write(b);
+            i = "Position: "+ data.getPosition() + "\n";
+            b = i.getBytes();
+            fileOutputStream.write(b);
+            i = "Id: "+String.valueOf(data.getId()) + "\n";
+            b = i.getBytes();
+            fileOutputStream.write(b);
+            i = "_________________________________________" + "\n";
             b = i.getBytes();
             fileOutputStream.write(b);
 
