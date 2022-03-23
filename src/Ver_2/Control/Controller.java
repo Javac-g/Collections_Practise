@@ -5,9 +5,11 @@ import Ver_2.Data.Data;
 import Ver_2.Model.Model;
 import Ver_2.View.View;
 
+import java.io.IOException;
+
 public class Controller {
 
-    public void initController(){
+    public void initController() throws IOException {
         Model model = new Model();
         View view = new View();
 
