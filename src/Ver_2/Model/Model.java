@@ -4,6 +4,10 @@ package Ver_2.Model;
 
 import Ver_2.Data.Data;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +15,14 @@ public class Model {
 
     private List<Data> datalist = new ArrayList<>();
 
-    public void create(String Name , String Position,Integer Id){
+    public void create(String Name , String Position,Integer Id) throws IOException {
 
         Data data = new Data();
         data.setName(Name);
         data.setPosition(Position);
         data.setId(Id);
         datalist.add(data);
+
 
     }
 
