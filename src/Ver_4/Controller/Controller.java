@@ -9,6 +9,7 @@ public class Controller {
         Model model = new Model();
         View view = new View();
         //unfinished
+        //add file input
         while (true){
             view.printMenu();
             Integer command = view.readCommand();
