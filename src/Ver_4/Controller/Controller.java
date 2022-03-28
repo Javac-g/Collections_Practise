@@ -11,7 +11,7 @@ public class Controller {
 
         while (true){
             view.printMenu();
-            int command = view.readCommand();
+            Integer command = view.readCommand();
 
             switch (command){
                 case 6:
