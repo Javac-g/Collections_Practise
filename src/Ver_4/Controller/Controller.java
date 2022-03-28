@@ -8,7 +8,7 @@ public class Controller {
     public void initController(){
         Model model = new Model();
         View view = new View();
-
+        //unfinished
         while (true){
             view.printMenu();
             Integer command = view.readCommand();
