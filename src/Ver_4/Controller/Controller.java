@@ -15,7 +15,7 @@ public class Controller {
 
             switch (command){
                 case 6:
-                    break;
+                   return;
                 case 5:
                 case 4:
                     view.message("Enter pesrson to delete");
@@ -25,6 +25,7 @@ public class Controller {
                     }else{
                         System.out.println("Nothing to delete");
                     }
+                    break;
                 case 3:
                     view.message("Enter person to update - Name");
                     Data newData = model.Update(view.addName(),view.addName(),view.addPosition(),view.addSalary());
@@ -34,6 +35,7 @@ public class Controller {
                     }else{
                         view.message("Nothing to update");
                     }
+                    break;
                 case 2:
                     view.message("Enter person to find-Name: ");
                     Data data = model.Read(view.addName());
@@ -42,11 +44,12 @@ public class Controller {
                     }else {
                         view.message("Nothing to show");
                     }
-
+                    break;
                 case 1:
                     view.message("Enter person Data");
                     model.Create(view.addName(),view.addPosition(),view.addSalary());
                     view.message("Data saved");
+                    break;
             }
         }
     }
