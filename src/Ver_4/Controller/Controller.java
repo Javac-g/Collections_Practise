@@ -4,8 +4,10 @@ import Ver_4.Model.Model;
 import Ver_4.User.Data;
 import Ver_4.View.View;
 
+import java.sql.SQLException;
+
 public class Controller {
-    public void initController(){
+    public void initController() throws SQLException {
         Model model = new Model();
         View view = new View();
         //unfinished
