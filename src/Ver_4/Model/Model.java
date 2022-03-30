@@ -4,10 +4,7 @@ package Ver_4.Model;
 
 import Ver_4.User.Data;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,18 +19,22 @@ public class Model {
 
     public void Create(String person_name,String person_position,Integer person_salary) throws SQLException {
         Connection con = DriverManager.getConnection(url,user,password);
-        Statement stmt = con.createStatement();
-        System.out.println(con);
-        System.out.println(stmt);
+
+
         data.setName(person_name);
         data.setPosition(person_position);
         data.setSalary(person_salary);
         database.add(data);
-
-        String insertSQL = "INSERT INTO info VALUES(?,?,?)";
-        stmt.setString(1,person_name);
+        Integer I =1;
+        String insertSQL = "INSERT INTO info VALUES(?,?,?,?)";
+        PreparedStatement stmt = con.prepareStatement(insertSQL);
+        stmt.setInt(1,I++);
+        stmt.setString(2,person_name);
+        stmt.setString(3,person_position);
+        stmt.setInt(4,person_salary);
+        I++;
         System.out.println("Data add successful");
-        stmt.executeUpdate(insertSQL);
+        stmt.executeUpdate();
     }
 
     public Data Read(String name){
