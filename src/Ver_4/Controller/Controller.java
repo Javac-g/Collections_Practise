@@ -4,22 +4,29 @@ import Ver_4.Model.Model;
 import Ver_4.User.Data;
 import Ver_4.View.View;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 public class Controller {
-    public void initController() throws SQLException {
+    public void initController() throws SQLException, FileNotFoundException {
+
         Model model = new Model();
         View view = new View();
+        Integer command = 0;
         //unfinished
         //add break
-        while (true){
+
+        while (command !=5){
             view.printMenu();
-            Integer command = view.readCommand();
+            command = view.readCommand();
 
             switch (command){
                 case 6:
+                    view.message("List of all employee: ");
+                    model.getAll();
                    return;
                 case 5:
+                    System.out.println("bye bye");
                 case 4:
                     view.message("Enter pesrson to delete");
                     int index = model.Delete(view.addName());
