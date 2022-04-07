@@ -18,7 +18,21 @@ public class Controller {
                 model.create_person(view.addName(),view.addPosition(),view.addSalary());
                 view.printMessage("Person created! ");
             }
+            else if(command == 2){
+                view.printMessage("Find person");
+                Data data = model.find_person(view.addName());
+                if(data != null){
+                    view.printData(data);
+                }else {
+                    view.printMessage("Npthing to show");
+                }
 
+
+            }
+            else if(command == 3){
+                view.printMessage("Update person: ");
+                model.update_person(view.addName(),view.addName(),view.addPosition(),view.)
+            }
         }
 
 
