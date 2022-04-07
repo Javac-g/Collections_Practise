@@ -20,9 +20,9 @@ public class Controller {
             }
             else if(command == 2){
                 view.printMessage("Find person");
-                Data data = model.find_person(view.addName());
-                if(data != null){
-                    view.printData(data);
+                Data searchdata = model.find_person(view.addName());
+                if(searchdata != null){
+                    view.printData(searchdata);
                 }else {
                     view.printMessage("Npthing to show");
                 }
@@ -31,7 +31,14 @@ public class Controller {
             }
             else if(command == 3){
                 view.printMessage("Update person: ");
-                model.update_person(view.addName(),view.addName(),view.addPosition(),view.)
+                Data newdata = model.update_person(view.addName(),view.addName(),view.addPosition(),view.addSalary());
+
+                if(newdata != null){
+                    view.printData(newdata);
+                }
+                else{
+                    view.printMessage("Npthing to update");
+                }
             }
         }
 
