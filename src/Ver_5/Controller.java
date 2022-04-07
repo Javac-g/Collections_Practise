@@ -40,6 +40,17 @@ public class Controller {
                     view.printMessage("Npthing to update");
                 }
             }
+            else if(command == 4){
+                view.printMessage("Person to delete");
+                int index = model.delete_person(view.addName());
+                if(index != -1){
+                    view.printMessage("person № " + index + " was deleted");
+                }else {
+                    view.printMessage("Nothing to delete");
+                }
+            }else{
+                view.printMessage("Wrong command");
+            }
         }
 
 
