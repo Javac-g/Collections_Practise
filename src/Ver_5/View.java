@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class View {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public String printMessage(String msg){
-        return msg;
+    public void printMessage(String msg){
+
+        System.out.println(msg);
     }
     public Integer readCommand(){
         Integer command = scanner.nextInt();
@@ -35,12 +36,12 @@ public class View {
         return name;
     }
     public String addPosition(){
-        System.out.println("ENTER Position: ");
+        System.out.println("ENTER POSITION: ");
         String Position = scanner.next();
         return Position;
     }
     public Integer addSalary(){
-        System.out.println("ENTER Position: ");
+        System.out.println("ENTER SALARY: ");
         Integer Salary = scanner.nextInt();
         return Salary;
     }

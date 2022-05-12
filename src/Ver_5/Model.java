@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model {
-    Data data = new Data();
+
     List<Data> datalist = new ArrayList<>();
 
     public void create_person(String name,String position,Integer Salary){
-
+        Data data = new Data();
         data.setName(name);
         data.setPosition(position);
         data.setSalary(Salary);
@@ -39,7 +39,7 @@ public class Model {
 
     public int delete_person(String name){
         int index = -1;
-        for(int i = 0 ; i >= datalist.size();i++){
+        for(int i = 0 ; i < datalist.size();i++){
             if(datalist.get(i).getName().equals(name)){
                 index = i;
                 break;

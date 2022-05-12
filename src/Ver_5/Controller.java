@@ -1,7 +1,7 @@
 package Ver_5;
 
 public class Controller {
-    public void initController(){
+    public void init(){
 
         Model model = new Model();
         View view = new View();
@@ -15,16 +15,17 @@ public class Controller {
             }
             else if(command == 1){
                 view.printMessage("Create new person");
+
                 model.create_person(view.addName(),view.addPosition(),view.addSalary());
                 view.printMessage("Person created! ");
             }
             else if(command == 2){
                 view.printMessage("Find person");
-                Data searchdata = model.find_person(view.addName());
-                if(searchdata != null){
-                    view.printData(searchdata);
+                Data data = model.find_person(view.addName());
+                if(data != null){
+                    view.printData(data);
                 }else {
-                    view.printMessage("Npthing to show");
+                    view.printMessage("Nothing to show");
                 }
 
 
