@@ -34,11 +34,12 @@ public class View {
 
     }
     String addName(){
-
+        System.out.println("Enter name: ");
         return scanner.next();
 
     }
     Integer addSalary(){
+        System.out.println( "Enter salary: ");
         return scanner.nextInt();
 
     }
