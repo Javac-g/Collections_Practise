@@ -15,10 +15,18 @@ public class Controller {
             if(command == 1){
                 view.printMessage("Enter person to add: ");
                 model.create(view.addName(),view.addSalary());
+                view.printMessage("Saved!");
+            } else if (command == 2) {
+                view.printMessage("find person: ");
+                Data find = model.find(view.addName());
+
+                if(find != null){
+
+                    view.readData(find);
+                }
+
+
             }
-
-
-
 
 
         }
