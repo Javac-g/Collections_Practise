@@ -19,6 +19,22 @@ public class Model {
 
     }
 
+    public Data find(String name){
+
+        for(Data searchPerson: dataList){
+
+            if (searchPerson.getName().equals(name)){
+
+                return searchPerson;
+
+            }
+
+        }
+        return null;
+
+
+    }
+
 
 
 
