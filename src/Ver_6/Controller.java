@@ -38,6 +38,21 @@ public class Controller {
                     view.printMessage("Nothing to update");
                 }
 
+            } else if (command == 4) {
+                view.printMessage("Person to delete: ");
+                int index = model.delete(view.addName());
+
+                if(index != -1){
+                    System.out.println("was delete person №: " + index);
+                }else {
+                    view.printMessage("Nothing to delete");
+                }
+
+            } else if (command == 5) {
+                break;
+
+            }else {
+                System.out.println("wrong comand: ");
             }
 
 
