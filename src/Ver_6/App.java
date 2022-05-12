@@ -2,6 +2,11 @@ package Ver_6;
 
 public class App {
 
-    Controller controller = new Controller();
+    public static void main(String...args){
 
+        Controller controller = new Controller();
+        controller.init();
+
+
+    }
 }
