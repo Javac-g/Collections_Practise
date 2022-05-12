@@ -23,8 +23,20 @@ public class Controller {
                 if(find != null){
 
                     view.readData(find);
+                }else {
+                    view.printMessage("Nothing to find");
                 }
 
+
+            } else if (command == 3) {
+                view.printMessage("Epdate person");
+                Data update = model.update(view.addName(), view.addName(), view.addSalary());
+
+                if(update != null){
+                    view.readData(update);
+                }else {
+                    view.printMessage("Nothing to update");
+                }
 
             }
 
