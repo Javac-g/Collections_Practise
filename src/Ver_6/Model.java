@@ -34,6 +34,25 @@ public class Model {
 
 
     }
+    public Data update(String name, String newName, Integer newSalary){
+
+        Data upPerson = find(name);
+
+        if(upPerson != null){
+            upPerson.setName(newName);
+            upPerson.setSalary(newSalary);
+            return upPerson;
+        }
+        return null;
+
+    }
+    public Integer delete(String name){
+
+
+
+
+
+    }
 
 
 
