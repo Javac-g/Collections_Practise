@@ -9,10 +9,9 @@ public class Stack {
         last = -1;
     }
     public void push(int item){
-        if (last >= stck.length){
-            System.out.println("Stack is full");
+        if (last > size){
             int[] temp = new int[stck.length*2];
-            for (int i = 0;i < stck.length;i++){
+            for (int i = 0;i <= stck.length-1;i++){
                 temp[i] = stck[i];
             }
             stck = temp;
