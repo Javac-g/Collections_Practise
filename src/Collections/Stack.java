@@ -19,4 +19,10 @@ public class Stack {
         }
         stck[++last] = item;
     }
+    public int pop(){
+        if(last < 0){
+            System.out.println("Stack is empty");
+        }
+        return stck[last--];
+    }
 }
