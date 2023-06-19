@@ -4,20 +4,21 @@ import java.util.*;
 
 public class Main {
     public static void main(String...args) {
-        List<String> name = new ArrayList<>();
-        name.add("Maks");
-        name.add("Anna");
-        name.add("Irina");
-        name.add("Alice");
-        name.add("Dmitry");
-        name.add("Lera");
+        List<String> names = new ArrayList<>();
+        names.add("Maks");
+        names.add("Anna");
+        names.add("Irina");
+        names.add("Alice");
+        names.add("Dmitry");
+        names.add("Lera");
 
-        Iterator<String> iterator = name.iterator();
-
+        Iterator<String> iterator = names.iterator();
         while (iterator.hasNext()){
-            String s = iterator.next();
-            System.out.println("Name: " + s);
+            String name = iterator.next();
+            System.out.println(name);
         }
-
+        Iterator<String> iterator1 = names.iterator();
+        Iterable<String> s3 = new ArrayList<>();
+        Collection<String> s4 = new ArrayList<>();
     }
 }
