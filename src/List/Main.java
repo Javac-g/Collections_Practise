@@ -4,21 +4,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String...args) {
-        List<String> names = new ArrayList<>();
-        names.add("Maks");
-        names.add("Anna");
-        names.add("Irina");
-        names.add("Alice");
-        names.add("Dmitry");
-        names.add("Lera");
+        Stack stack  = new Stack(7);
 
-        Iterator<String> iterator = names.iterator();
-        while (iterator.hasNext()){
-            String name = iterator.next();
-            System.out.println(name);
+        System.out.println("Pushing items");
+        for (int i = 0;i < stack.getStck().length;i++){
+            System.out.print(i + " ");
+            stack.push(i);
         }
-        Iterator<String> iterator1 = names.iterator();
-        Iterable<String> s3 = new ArrayList<>();
-        Collection<String> s4 = new ArrayList<>();
+
+        System.out.println("\nStack contains: ");
+        for (int i = 0 ;i < stack.getStck().length ;i++) System.out.print(stack.pop() + " ");
+
     }
 }
